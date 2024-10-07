@@ -194,6 +194,8 @@ try {
                     //Création d'une table Table(id, champ1, champ2)
                     $rqt = "CREATE TABLE $BDD.Table (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, champ1 VARCHAR(255), champ2 VARCHAR(255));";
                     $instancePdo->query($rqt);
+                    $rqt = "CREATE TABLE $BDD.Utilisateur (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, champ1 VARCHAR(255), champ2 VARCHAR(255));";
+                    $instancePdo->query($rqt);
                     $test = true;
                 } catch (PDOException $e) {
                     echo $e->getMessage();
